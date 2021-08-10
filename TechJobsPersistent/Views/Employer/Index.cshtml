@@ -12,28 +12,19 @@
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Location</th>
-                <th scope="col">More Info</th>
-
-            </tr>
-        </thead>
-
-        <tbody>
+    <div>
+        <ul>
             @foreach (Employer employer in Model)
             {
-            <tr>
-                <td>@employer.Id</td>
-                <td>@employer.Name</td>
-                <td>@employer.Location</td>
-
-                <td><a asp-controller="Employer" asp-action="About" asp-route-id="@employer.Id">Learn More</a></td>
-            </tr>
+                <li>
+                    <a asp-controller="Employer" asp-action="About" asp-route-id="@employer.Id">@employer.Name</a>
+                </li>
             }
-        </tbody>
-    </table>
+        </ul>
+    </div>
+
+    <div>
+        <a asp-controller="Employer" asp-action="Add">Add Unlisted Employer</a>
+        <br />
+    </div>
 }

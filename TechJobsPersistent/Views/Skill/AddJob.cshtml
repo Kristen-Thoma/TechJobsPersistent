@@ -1,4 +1,5 @@
-﻿@model TechJobsPersistent.ViewModels.AddJobSkillViewModel
+﻿
+@model TechJobsPersistent.ViewModels.AddJobSkillViewModel
 
 <h1>Add Tag to Event: @Model.Job.Name</h1>
 
@@ -9,5 +10,6 @@
         <select asp-for="SkillId" asp-items="Model.Skills"></select>
         <span asp-validation-for="SkillId"></span>
     </div>
+
     <input type="submit" value="Add Skill" />
 </form>

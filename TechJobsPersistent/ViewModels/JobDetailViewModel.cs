@@ -27,5 +27,6 @@ namespace TechJobsPersistent.ViewModels
                 }
             }
         }
+
     }
 }
